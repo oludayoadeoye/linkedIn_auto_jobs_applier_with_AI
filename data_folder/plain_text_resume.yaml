@@ -1,101 +1,209 @@
 personal_information:
-  name: "[Your Name]"
-  surname: "[Your Surname]"
-  date_of_birth: "[DD/MM/YYYY]"
-  country: "[Your Country]"
-  city: "[Your City]"
-  address: "[Your Address]"
-  phone_prefix: "[Your Phone Prefix]"
-  phone: "[Your Phone Number]"
-  email: "[Your Email Address]"
-  github: "[Your GitHub Profile URL]"
-  linkedin: "[Your LinkedIn Profile URL]"
+  name: Oludayo
+  surname: Adeoye
+  date_of_birth: 24/03/1991
+  country: Estonia
+  city: Tallinn
+  address: Akademee tee
+  phone_prefix: "+372"
+  phone: "57921060"
+  email: dayozoe@gmail.com
+  github: https://github.com/dbillion
+  linkedin: https:www.linkedin.com/in/oludayo-adeoye
 
 education_details:
-  - degree: "[Your Degree]"
-    university: "[Your University]"
-    gpa: "[Your GPA]"
-    graduation_year: "[Year of Graduation]"
-    field_of_study: "[Your Field of Study]"
+  - degree: Bachelor's Degree
+    university: Estonian Entrepreneurship University of Applied Sciences / EEK Mainor
+    gpa: 4/4
+    graduation_year: "2024"
+    field_of_study: Software Engineering
+    courses:
+      Data Structures and Algorithms: "4"
+      Web Development: "4"
+      Software Engineering Principles: "4"
+      Database Management Systems: "4"
+      Computer Networks: "4"
     exam:
-      [Course Name 1]: "[Grade]"
-      [Course Name 2]: "[Grade]"
-      [Course Name 3]: "[Grade]"
-      [Course Name 4]: "[Grade]"
-      [Course Name 5]: "[Grade]"
+      Final Project: "4"
+
+  - degree: Bachelor's Degree
+    university: Federal University of Agriculture Abeokuta
+    gpa: 4/4
+    graduation_year: "2014"
+    field_of_study: Mechanical engineering
+    courses:
+      Thermodynamics: "4"
+      Fluid Mechanics: "4"
+      Machine Design: "4"
+      Materials Science: "4"
+      Engineering Mathematics: "4"
+    exam:
+      Final Year Project: "4"
 
 experience_details:
-  - position: "[Your Job Title]"
-    company: "[Company Name]"
-    employment_period: "[Start Date] - [End Date]"
-    location: "[Location]"
-    industry: "[Industry]"
+  - position: Full Stack Engineer
+    company: Freelance
+    employment_period: 01/2021 - Present
+    location: Tallinn, Estonia
+    industry: Information Technology # Added industry field
     key_responsibilities:
-      - responsibility_1: "[Key Responsibility 1]"
-      - responsibility_2: "[Key Responsibility 2]"
-      - responsibility_3: "[Key Responsibility 3]"
+      - responsibility_1: Developed 3D portfolio using Three.js and ReactJS, hosted on Vercel
+      - responsibility_2: Deployed web apps on Google Cloud and Kubernetes Engine
+      - responsibility_3: Provided IT support across various domains as Support Engineer
     skills_acquired:
-      - "[Skill 1]"
-      - "[Skill 2]"
-      - "[Skill 3]"
+      - Full-stack development
+      - Cloud deployment
+      - IT support
+
+  - position: Software Test Engineer Intern
+    company: Ericsson
+    employment_period: 05/2022 - 12/2022
+    location: Tallinn, Estonia
+    industry: Telecommunications # Added industry field
+    key_responsibilities:
+      - responsibility_1: Migrated revision control, improving product delivery efficiency
+      - responsibility_2: Collaborated on software updates for global radio products
+      - responsibility_3: Automated document production, reducing costs by 50%
+    skills_acquired:
+      - C#
+      - Azure DevOps
+      - SQL
+      - Agile methodologies
+      - Spring Boot
+      - Spring Framework
+      - RESTful API design
+      - Microservices architecture
+      - JPA/Hibernate
+      - Maven/Gradle
+      - JUnit and Mockito for testing
+      - SQL (MySQL, PostgreSQL)
+      - NoSQL databases (MongoDB, Cassandra)
+      - Message queues (RabbitMQ, Apache Kafka)
+      - Docker containerization
+      - CI/CD pipelines (Jenkins, GitLab CI)
+      - JavaScript/TypeScript
+      - React.js
+      - Redux for state management
+      - React Router
+      - HTML5 and CSS3
+      - Responsive web design
+      - CSS preprocessors (Sass, Less)
+      - Webpack
+      - Jest and React Testing Library
+      - RESTful API integration
+      - GraphQL
+      - Progressive Web Apps (PWA)
+      - Git version control
+      - Agile methodologies (Scrum, Kanban)
+      - Cloud platforms (AWS, Google Cloud, Azure)
+      - Serverless architecture
+      - Performance optimization
+      - Security best practices
+      - Web accessibility standards
+      - Cross-browser compatibility
+      - Problem-solving
+      - Team collaboration
+      - Communication
+      - Time management
+      - Adaptability
+      - Continuous learning
 
 projects:
-  - name: "[Project Name]"
-    description: "[Brief Description of the Project]"
-    link: "[Project URL]"
-  - name: "[Project Name]"
-    description: "[Brief Description of the Project]"
-    link: "[Project URL]"
+  - name: Flutter iPhone and Android Calculator App
+    description: Developed a versatile calculator application using Flutter, demonstrating proficiency in cross-platform mobile development and UI design.
+    period: May 2023 - Present
+    association: Freelance
+    link: https://github.com/dbillion/flutter-calculator.git
+
+  - name: Loan App Demo Prototype
+    description: Created a brief demo prototype for a loan application, showcasing rapid prototyping skills and financial software development capabilities.
+    period: Oct 2023
+    association: Freelance
+    link: https://github.com/dbillion/loanapp.git
+
+  - name: Django Blog with Google Map
+    description: Developed a Django-based blog application with integrated Google Maps functionality, showcasing skills in Python web development, geospatial integration, and full-stack capabilities.
+    association: Freelance
+    link: https://github.com/dbillion/RealBlog.git
+
+  - name: Portfolio App using React, Vite, and Blender for 3D elements
+    description: Developed a portfolio application using React and Vite for the frontend, and integrated Blender for 3D elements. This project showcases skills in modern frontend development, 3D graphics integration, and creating visually appealing user interfaces.
+    association: Freelance
+    link: https://lnkd.in/d37UrYts
 
 achievements:
-  - name: "[Achievement Title]"
-    description: "[Brief Description of the Achievement]"
-  - name: "[Achievement Title]"
-    description: "[Brief Description of the Achievement]"
+  - name: Leadership Awards for SDE Projects in Nigeria
+    description: Implemented 3 community projects with the help and contribution of 1000 colleagues
+  - name: Participated in Ericsson global competition as top 4 teams in Tallinn
+    description: Achieved a top 4 position in the Ericsson global competition held in Tallinn, demonstrating exceptional problem-solving and teamwork skills on an international stage
+  - name: Java community manager
+    description: Lead and grew a java global platform from 20 persons to 120 persons
 
 certifications:
-  - "[Certification Name]"
+  - Automation Analyst Certification
+  - Level I Certification
+  - Google Cloud Essentials
+  - Azure AI Fundamentals
+  - Website on Google Cloud
+  - Continuous Integration and Continuous Delivery with GitLab
+  - DevOps Foundations
+  - Chaos Engineering
+  - Continuous Delivery/Continuous Integration
+  - The Basics
+  - Introduction to IT Automation
+  - Microservices
+  - Learning Java
+  - Learning Jira Software
+  - Learning Kubernetes
+  - Learning Microsoft SQL Server 2019
+  - Learning Redux Toolkit
+  - Learning Terraform
+  - Bash Shell Scripting for Automation
+  - Networking Basics
+  - Security for Developers
+  - Scaling Your SQL Server Application
 
 languages:
-  - language: "[Language Name]"
-    proficiency: "[Proficiency Level]"
-  - language: "[Language Name]"
-    proficiency: "[Proficiency Level]"
+  - language: English
+    proficiency: Native
+  - language: Spanish
+    proficiency: Professional
 
 interests:
-  - "[Interest 1]"
-  - "[Interest 2]"
-  - "[Interest 3]"
-  - "[Interest 4]"
-  - "[Interest 5]"
+  - Full-Stack Development
+  - Devops
+  - Software Architecture
+  - IoT system design and development
+  - Artificial Intelligence
+  - Cloud Technologies
 
 availability:
-  notice_period: "[Notice Period]"
+  notice_period: immediately
 
 salary_expectations:
-  salary_range_usd: "[Expected Salary Range in USD]"
+  salary_range_usd: "50000"
 
 self_identification:
-  gender: "[Gender]"
-  pronouns: "[Pronouns]"
-  veteran: "[Veteran Status]"
-  disability: "[Disability Status]"
-  ethnicity: "[Ethnicity]"
+  gender: Male
+  pronouns: He
+  veteran: "No"
+  disability: "No"
+  ethnicity: white
 
 legal_authorization:
-  eu_work_authorization: "[Yes/No]"
-  us_work_authorization: "[Yes/No]"
-  requires_us_visa: "[Yes/No]"
-  requires_us_sponsorship: "[Yes/No]"
-  requires_eu_visa: "[Yes/No]"
-  legally_allowed_to_work_in_eu: "[Yes/No]"
-  legally_allowed_to_work_in_us: "[Yes/No]"
-  requires_eu_sponsorship: "[Yes/No]"
+  eu_work_authorization: "Yes"
+  us_work_authorization: "No"
+  requires_us_visa: "Yes"
+  requires_us_sponsorship: "Yes"
+  requires_eu_visa: "No"
+  legally_allowed_to_work_in_eu: "Yes"
+  legally_allowed_to_work_in_us: "No"
+  requires_eu_sponsorship: "No"
 
 work_preferences:
-  remote_work: "[Yes/No]"
-  in_person_work: "[Yes/No]"
-  open_to_relocation: "[Yes/No]"
-  willing_to_complete_assessments: "[Yes/No]"
-  willing_to_undergo_drug_tests: "[Yes/No]"
-  willing_to_undergo_background_checks: "[Yes/No]"
+  remote_work: "Yes"
+  in_person_work: "Yes"
+  open_to_relocation: "Yes"
+  willing_to_complete_assessments: "Yes"
+  willing_to_undergo_drug_tests: "Yes"
+  willing_to_undergo_background_checks: "Yes"
