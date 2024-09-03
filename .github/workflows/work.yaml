@@ -37,7 +37,7 @@ jobs:
 
     - name: Run LinkedIn bot
       run: python main.py
-      working-directory: linkedIn_auto_jobs_applier_with_AI
+      working-directory: .  # Changed this line
 
     - name: Upload application results
       uses: actions/upload-artifact@v2
