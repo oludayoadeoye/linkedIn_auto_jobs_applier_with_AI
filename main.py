@@ -15,6 +15,7 @@ from src.linkedIn_authenticator import LinkedInAuthenticator
 from src.linkedIn_bot_facade import LinkedInBotFacade
 from src.linkedIn_job_manager import LinkedInJobManager
 from src.job_application_profile import JobApplicationProfile
+from playwright.sync_api import sync_playwright
 
 # Suppress stderr
 sys.stderr = open(os.devnull, 'w')
@@ -151,12 +152,11 @@ class FileManager:
         return result
 
 def init_browser() -> webdriver.Chrome:
-    try:
-        options = chromeBrowserOptions()
-        service = ChromeService(ChromeDriverManager().install())
-        return webdriver.Chrome(service=service, options=options)
-    except Exception as e:
-        raise RuntimeError(f"Failed to initialize browser: {str(e)}")
+    playwright = sync_playwright().start()
+    browser = playwright.chromium.launch(headless=True)
+    context = browser.new_context()
+    page = context.new_page()
+    return playwright, browser, page
 
 def create_and_run_bot(email: str, password: str, parameters: dict, openai_api_key: str):
     try:
@@ -166,15 +166,15 @@ def create_and_run_bot(email: str, password: str, parameters: dict, openai_api_k
             plain_text_resume = file.read()
         resume_object = Resume(plain_text_resume)
         resume_generator_manager = FacadeManager(openai_api_key, style_manager, resume_generator, resume_object, Path("data_folder/output"))
-        os.system('cls' if os.name == 'nt' else 'clear')
-        resume_generator_manager.choose_style()
-        os.system('cls' if os.name == 'nt' else 'clear')
+        
+        # Automatically select the first style
+        resume_generator_manager.selected_style = style_manager.styles[0]
         
         job_application_profile_object = JobApplicationProfile(plain_text_resume)
         
-        browser = init_browser()
-        login_component = LinkedInAuthenticator(browser)
-        apply_component = LinkedInJobManager(browser)
+        playwright, browser, page = init_browser()
+        login_component = LinkedInAuthenticator(page)
+        apply_component = LinkedInJobManager(page)
         gpt_answerer_component = GPTAnswerer(openai_api_key)
         bot = LinkedInBotFacade(login_component, apply_component)
         bot.set_secrets(email, password)
@@ -183,11 +183,13 @@ def create_and_run_bot(email: str, password: str, parameters: dict, openai_api_k
         bot.set_parameters(parameters)
         bot.start_login()
         bot.start_apply()
-    except WebDriverException as e:
-        print(f"WebDriver error occurred: {e}")
     except Exception as e:
         raise RuntimeError(f"Error running the bot: {str(e)}")
-
+    finally:
+        if 'browser' in locals():
+            browser.close()
+        if 'playwright' in locals():
+            playwright.stop()
 
 @click.command()
 @click.option('--resume', type=click.Path(exists=True, file_okay=True, dir_okay=False, path_type=Path), help="Path to the resume PDF file")
