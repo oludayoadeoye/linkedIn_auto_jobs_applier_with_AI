@@ -1,0 +1,40 @@
+name: LinkedIn Job Application Bot
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 */3 * * *'  # Runs every 3 hours
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Create secrets file
+      run: |
+        echo "email: ${{ secrets.LINKEDIN_EMAIL }}" > data_folder/secrets.yaml
+        echo "password: ${{ secrets.LINKEDIN_PASSWORD }}" >> data_folder/secrets.yaml
+        echo "openai_api_key: ${{ secrets.OPENAI_API_KEY }}" >> data_folder/secrets.yaml
+
+    - name: Run LinkedIn bot
+      run: python linkedIn_auto_jobs_applier_with_AI/main.py
+
+    - name: Upload application results
+      uses: actions/upload-artifact@v2
+      with:
+        name: application-results
+        path: data_folder/output/
